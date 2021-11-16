@@ -21,9 +21,9 @@ class CreatePlacesTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
-            $table->integer('phone');
-            $table->double('lat');
-            $table->double('lon');
+            $table->integer('phone')->nullable();
+            $table->double('lat')->nullable();
+            $table->double('lon')->nullable();
             $table->timestamps();
         });
     }

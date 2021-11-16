@@ -15,27 +15,27 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label for="phone" value="{{ __('電話番号') }}" />
+                <x-jet-input id="phone" class="block mt-1 w-full" type="tel"
+                    name="phone" required :value="old('phone')" />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')"
                     required />
             </div>
-
+            
             <div class="mt-4">
                 <x-jet-label for="password" value="{{ __('Password') }}" />
                 <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                    autocomplete="new-password" />
+                autocomplete="new-password" />
             </div>
-
+            
             <div class="mt-4">
                 <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
                 <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password"
-                    name="password_confirmation" required autocomplete="new-password" />
-            </div>
-{{-- 
-            <div class="mt-4">
-                <x-jet-label for="phone" value="{{ __('電話番号') }}" />
-                <x-jet-input id="phone" class="block mt-1 w-full" type="tel"
-                    name="phone" required :value="old('phone')" />
+                name="password_confirmation" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
@@ -48,7 +48,7 @@
                 <x-jet-label for="lon" value="{{ __('経度') }}" />
                 <x-jet-input id="lon" class="block mt-1 w-full" type="text"
                     name="lon" :value="old('lon')" required />
-            </div> --}}
+            </div>
 
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
